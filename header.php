@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri() . '/favicon.ico'?>">
 
-    <title>Blog Template for Bootstrap</title>
+    <title><?php wp_title( ' | ', true , 'right' ); echo bloginfo('name'); ?></title>
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
