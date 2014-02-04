@@ -5,26 +5,31 @@
 
         <div class="col-sm-8 blog-main">
 			
-<?php if ( have_posts () ) : while ( have_posts() ) : the_post(); ?>
+			<?php if ( have_posts () ) : while ( have_posts() ) : the_post(); ?>
 
-<article class="blog-post">
-  <h2 class="blog-post-title"><?php the_title(); ?></h2>
-  <p class="blog-post-meta"><?php the_time( 'F j, Y' ); ?> by <?php the_author_posts_link(); ?></p>
-  <?php the_content(); ?>
+				<article class="blog-post">
+					<h2 class="blog-post-title"><?php the_title(); ?></h2>
+					<p class="blog-post-meta"><?php the_time( 'F j, Y' ); ?> by <?php the_author_posts_link(); ?></p>
+					
+					<?php the_content(); ?>
   
-</article><!-- /.blog-post -->
-<hr>
-<h2>Comments</h2>
+				</article><!-- /.blog-post -->
 
-<?php comments_template( '', true ); ?>
+				<div id="comments">
+					<hr>
+					<h2>Comments</h2>
 
-<?php endwhile; endif; ?>
+					<?php comments_template( '', true ); ?>
+				</div>
 
-    </div><!-- /.blog-main -->
+			<?php endwhile; endif; ?>
 
-	<?php get_sidebar(); ?>
+    
+		</div><!-- /.blog-main -->
 
-  </div><!-- /.row -->
+		<?php get_sidebar(); ?>
+
+	</div><!-- /.row -->
 
 </div><!-- /.container -->
 
